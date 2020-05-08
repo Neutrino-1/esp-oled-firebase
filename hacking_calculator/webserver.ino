@@ -49,6 +49,7 @@ void startServer()
   server.begin();
 }
 
+//this function gets the URL and stores in the flash memory
 void handleSettingUpdate()
 {
   String data = server.arg("plain");  

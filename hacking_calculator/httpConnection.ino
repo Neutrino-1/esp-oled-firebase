@@ -1,3 +1,4 @@
+//To get text file from firebase storage or any other https liniks(preferably simple .txt file)
 void fetchTextFile()
 {
   text("Fetching..", 1, 0, 3, true, true);
@@ -5,6 +6,7 @@ void fetchTextFile()
   if (WiFi.status() == WL_CONNECTED)
   {
     std::unique_ptr<BearSSL::WiFiClientSecure>client(new BearSSL::WiFiClientSecure);
+    //to access https without figerprint
     client->setInsecure();
     HTTPClient http;
     http.begin(*client,textFileUrl);  //Enter your API

@@ -1,3 +1,4 @@
+//single tap for selection
 void singleTapUp()
 {
   if(selection)
@@ -12,6 +13,7 @@ void singleTapDown()
      selection = true;
 }
 
+//multitap for going inside the menu and also to return back to menu
 void doubleTapUp()
 {
   if(currentScreen == MENU)
@@ -62,6 +64,7 @@ void doubleTapDown()
   }
 }
 
+//Long press for scrolling +y and -Y direction and also to cycle through text message
 void longPressUp()
 {
     if(currentScreen == ASK_HELP)
@@ -99,6 +102,8 @@ void longPressDown()
       scrollyDir -= 6;  
     }
 }
+
+//To send the selected text to firebase in the chat
 
 void longPressStopUp()
 {

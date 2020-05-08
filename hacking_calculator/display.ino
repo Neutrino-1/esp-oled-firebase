@@ -1,4 +1,4 @@
-//Drawing text on OLED
+//Drawing text on OLED. Just simplified the whole process so I can do it in single line.
 void text(String s,int size,int cX,int cY,bool clear,bool inverse)
 {
   if(clear)
@@ -19,18 +19,21 @@ void text(String s,int size,int cX,int cY,bool clear,bool inverse)
     display.display();    
 }
 
+//Menu Screen
 void menu()
 {
     text("Download",2,0,0,true,!selection);
     text("Ask Help",2,0,17,false,selection);
 }
 
+//downloads screen
 void dowloadsScreen()
 {
     text(textFile,1,0,scrollyDir,true,false);
     delay(250);
 }
 
+//help screen
 void HelpScreen()
 {
     text(fetchStringData(),2,0,0,true,false);
@@ -39,6 +42,7 @@ void HelpScreen()
     delay(250);
 }
 
+//This tracks which screen is selected
 void selectedScreen()
 {
   switch(currentScreen)

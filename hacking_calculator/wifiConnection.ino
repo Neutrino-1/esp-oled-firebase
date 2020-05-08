@@ -1,3 +1,4 @@
+//boots the server if there there is magnet place near the hall effect sensor
 void bootServer()
 {
   if(!digitalRead(12))
@@ -18,6 +19,7 @@ void bootServer()
   }
 }
 
+//Connect to configured wifi
 bool wifiConnection()
 {
     WiFi.softAPdisconnect(true);  

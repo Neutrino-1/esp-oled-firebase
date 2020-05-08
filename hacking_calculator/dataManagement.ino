@@ -1,3 +1,6 @@
+
+
+/*This function writes the data to the file system*/
 void writeDownloads()
 {
   File spiffTextFile = SPIFFS.open(textFilePath, "w");
@@ -8,6 +11,7 @@ void writeDownloads()
   }
 }
 
+/*This reads the data from the file system and store it in textFile variable*/
 void readDownloads()
 {
   File spiffTextFile = SPIFFS.open(textFilePath, "r");
@@ -22,6 +26,11 @@ void readDownloads()
   }
 }
 
+/*
+  To read JSON file form flash
+  this setup is not necessary if you have to read single URL, u can get away with above function
+  but this helps us to get multiple fields in the esp hosted server to enter multiple data.
+*/
 void readFlashJson()
 {
     if(SPIFFS.exists(textFileUrlPath))
@@ -49,8 +58,11 @@ void readFlashJson()
       {
         _url = doc["link"];
         textFileUrl = _url;
-        Serial.println(textFileUrl);
-        Serial.println();
+
+  /*More debugging*/
+  
+//        Serial.println(textFileUrl);
+//        Serial.println();
       }
     }
   }

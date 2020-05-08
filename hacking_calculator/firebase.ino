@@ -1,3 +1,4 @@
+//To fetch data from firebase, User2 should be your patners user name
 String fetchStringData()
 {
    if (Firebase.getString(firebaseData,"/User2/chat"))
@@ -17,6 +18,7 @@ String fetchStringData()
      }
 }
 
+//To send data to firebase, User1 should be where you send the data
   void insertData(String value)
   {
     if (Firebase.set(firebaseData, "/User1/chat", value))

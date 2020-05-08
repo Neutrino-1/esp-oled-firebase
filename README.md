@@ -23,6 +23,10 @@ Sketch -> include library -> ManageLibrary -> *Search for the above library*
 Or
 follow the instructions on respective library repository.
 
+### Errors
+
+4 Errors has been planted and extremely easy to fix! Compile once to figure out the Errors.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

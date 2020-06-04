@@ -1,5 +1,3 @@
-
-
 /*This function writes the data to the file system*/
 void writeDownloads()
 {

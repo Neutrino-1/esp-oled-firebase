@@ -1,6 +1,7 @@
-//Drawing text on OLED. Just simplified the whole process so I can do it in single line.
+//Drawing text on OLED. Just simplified the whole process so I can do it in single line .
 void text(String s,int size,int cX,int cY,bool clear,bool inverse)
 {
+  
   if(clear)
   {
     display.clearDisplay();
@@ -16,7 +17,8 @@ void text(String s,int size,int cX,int cY,bool clear,bool inverse)
     display.setTextSize(size);
     display.setCursor(cX,cY); 
     display.println(s);
-    display.display();    
+    display.display();  
+  
 }
 
 //Menu Screen
